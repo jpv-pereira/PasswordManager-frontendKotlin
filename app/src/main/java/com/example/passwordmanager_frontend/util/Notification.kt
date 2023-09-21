@@ -8,6 +8,7 @@ import android.view.ViewGroup
 import android.view.animation.Animation
 import android.view.animation.AnimationUtils
 import android.widget.Button
+import android.widget.FrameLayout
 import android.widget.PopupWindow
 import android.widget.TextView
 import com.example.passwordmanager_frontend.R
@@ -24,6 +25,8 @@ class Notification (private val context: Context) {
             true
         )
 
+        val anchorView = popupView.findViewById<FrameLayout>(R.id.notification_frame)
+
         val popupMessage = popupView.findViewById<TextView>(R.id.notification_text)
         val closeButton = popupView.findViewById<Button>(R.id.notification_button)
 
@@ -37,7 +40,8 @@ class Notification (private val context: Context) {
         }
 
 
-        popupWindow.showAtLocation(popupView, Gravity.CENTER, 0, 0)
+        //popupWindow.showAsDropDown(anchorView)
+        popupWindow.showAtLocation(popupView, Gravity.TOP, 0, 0)
     }
 
 }
