@@ -3,7 +3,9 @@ package com.example.passwordmanager_frontend
 import android.content.Intent
 import android.os.Bundle
 import android.util.Log
+import android.view.ViewGroup
 import android.widget.Button
+import android.widget.PopupWindow
 import android.widget.TextView
 import androidx.activity.ComponentActivity
 import com.example.passwordmanager_frontend.api.ApiService
@@ -28,9 +30,11 @@ class MainActivity : ComponentActivity() {
         }
 
         findViewById<Button> (R.id.go_register_button).setOnClickListener {
-            val intent = Intent(this, RegisterActivity::class.java)
+            //val intent = Intent(this, RegisterActivity::class.java)
+            intent = Intent(this, ListActivity::class.java)
             startActivity(intent)
         }
+
     }
 }
 

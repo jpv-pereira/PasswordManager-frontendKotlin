@@ -32,6 +32,11 @@
             android:exported="true"
             android:theme="@style/Theme.PasswordManagerfrontend">
         </activity>
+        <activity
+            android:name=".ListActivity"
+            android:exported="true"
+            android:theme="@style/Theme.PasswordManagerfrontend">
+        </activity>
     </application>
 
 </manifest>
